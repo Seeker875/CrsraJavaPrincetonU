@@ -33,12 +33,15 @@ public class Birthday {
         //cummmulative sum
         double cumSum = 0;
         double prop = 0;
+       
         for (int i=0; i < n; i++ )
         {
         	cumSum += outer[i];
             prop = cumSum/trails;
+
+          
         	System.out.println(i +1 + "\t" +outer[i]+ "\t" + prop);
-        	if (prop > 0.50) {
+        	if (prop >= 0.50) {
         		break;
         	}
 

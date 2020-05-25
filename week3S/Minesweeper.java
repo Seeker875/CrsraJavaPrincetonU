@@ -28,18 +28,36 @@ public class Minesweeper {
         int counter = k; 
         while(counter>0){
         	// random integer between i and n-1
-            int r = (int) (Math.random() * ((m*n)-1));
+            int r1 = (int) (Math.random() * m);
+            int r2 = (int) (Math.random() * n);
+            /*
             //System.out.println(r +"\t"+ ((r / m)+1) +"\t"+ ((r % n)+1));
             if(mineM[(r / m)+1][(r % n)+1] == false){
             	mineM[(r / m)+1][(r % n)+1] = true;
             	counter -= 1;
             }
+            */
+            if(mineM[r1 + 1][r2 + 1] == false){
+            	mineM[r1 + 1][r2 + 1] = true;
+            	counter -= 1;
+            }
             
         	
         }
+        /*
+        for (int i=1; i < m+1; i++ ) {
+        	for (int j=1; j < n+1; j++ ) {
+        		System.out.print(mineM[i][j]);
+        		System.out.print("  ");
+        	}
+        	System.out.println();
+
+        }
+		*/
         // mineCounts to return mine in a function
         // int[][] mineCounts = new int[m][n];
 
+        
         // outer nested loops for mine count
         for (int i=0; i < m; i++ ) {
         	
@@ -67,6 +85,7 @@ public class Minesweeper {
         	System.out.println();
 
         }
+        
 
     }
 }
