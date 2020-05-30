@@ -27,8 +27,8 @@ public class ShannonEntropy
             
            
         }
- 		
+ 	sEnt = Math.round(sEnt*10000.0)/10000.0;
 		
- 		StdOut.println(sEnt);
+ 	StdOut.println(sEnt);
  	}
 }
