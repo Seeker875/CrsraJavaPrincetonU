@@ -34,7 +34,7 @@ public class Divisors {
     	a=Math.abs(a);
     	b=Math.abs(b);
 
-    	return (a*b)/gcd(a,b);
+    	return (a/gcd(a,b))*b;
 
     }
 
